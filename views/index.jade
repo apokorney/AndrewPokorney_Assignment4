@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  h1= title
+  p Note Creator!
+
+  .container
+    .row
+      section.col-s-50.col-xs-offset-1.col-md-20.col-md-offset-1
+        h1 Log In
+        form(action="/note.js")
+          .form-group
+            label(for='userName') User name
+            input#userName.form-control(type='text', placeholder='Username Here', required, autofocus)
+          .form-group
+            label.control-label(for='password') Password
+            input#password.form-control(type='password', placeholder='Password Here', required)
+          .form-group
+            input.btn.btn-primary.btn-block(type='submit', value='Login')
